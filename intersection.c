@@ -70,7 +70,7 @@ double	cylinder_intersection(void *obj, t_xyz starting_point, t_xyz rd)
 	double	k[4];
 
 	cyl = (t_obj*)obj;
-	// cyl->axis = vecnorm(cyl->axis);
+	cyl->axis = vecnorm(cyl->axis);
 	co = vecsub(starting_point, cyl->center);
 	k[0] = vecdot(rd, rd) - pow(vecdot(rd, cyl->axis), 2);
 	k[1] = 2 * (vecdot(rd, co) - vecdot(rd, cyl->axis) * vecdot(co, cyl->axis));

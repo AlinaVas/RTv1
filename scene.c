@@ -99,7 +99,7 @@ void	get_scene3(t_mlx *p)
 	obj->next->next->next->next->next = NULL;
 	l = create_light(ambient, 0.2, (t_xyz){0, 0, 0});
 	p->light = l;
-	l->next = create_light(point, 0.6, (t_xyz){2, 1, 0});
+	l->next = create_light(point, 0.6, (t_xyz){2, 4, -6});
 	l->next->next = create_light(directional, 0.2, (t_xyz){1, 4, 4});
 	l->next->next->next = NULL;
 }
